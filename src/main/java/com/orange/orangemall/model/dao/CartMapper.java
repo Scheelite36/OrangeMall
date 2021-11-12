@@ -31,4 +31,6 @@ public interface CartMapper {
 
     int changeSelectStatus(@Param("userId") Integer userId, @Param("productId") Integer productId,
                      @Param("selected") Integer selected);
+
+    int deleteByProductId(Integer productId);
 }

@@ -53,7 +53,7 @@ public class CartServiceImpl implements CartService {
                 throw new OrangeMallException(OrangeMallExceptionEnum.INSERT_FAIL);
             }
         } else {
-            newCart.setUserId(cart.getId());
+            newCart.setId(cart.getId());
             newCart.setQuantity(cart.getQuantity() + count);
             newCart.setSelected(OrangeMallConstant.SELECTED);
             int re = cartMapper.updateByPrimaryKeySelective(newCart);
@@ -102,7 +102,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public List<CartVO> delete(Integer productId) {
         Integer userId = UserUtils.getLoginUserId();
-        int count = cartMapper.deleteByPrimaryKey(productId);
+        int count = cartMapper.deleteByProductId(productId);
         if (count == 0) {
             throw new OrangeMallException(OrangeMallExceptionEnum.DELETE_FAIL);
         }

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 
 @RestController
-@Api("购物车模块")
+@Api(tags = "购物车模块")
 @RequestMapping("/cart")
 public class CartController {
     @Autowired

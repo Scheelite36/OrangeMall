@@ -1,6 +1,9 @@
 package com.orange.orangemall.model.dao;
 
 import com.orange.orangemall.model.pojo.Order;
+import io.swagger.models.auth.In;
+
+import java.util.List;
 
 public interface OrderMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +17,10 @@ public interface OrderMapper {
     int updateByPrimaryKeySelective(Order record);
 
     int updateByPrimaryKey(Order record);
+
+    Order selectByOrderNo(String orderNo);
+
+    List<Order> selectByUserId(Integer userId);
+
+    List<Order> selectAll();
 }

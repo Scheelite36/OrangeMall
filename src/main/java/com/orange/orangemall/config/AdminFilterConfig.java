@@ -26,6 +26,7 @@ public class AdminFilterConfig{
         filterRegistrationBean.addUrlPatterns("/category/admin/*");
         filterRegistrationBean.addUrlPatterns("/cart/admin/*");
         filterRegistrationBean.addUrlPatterns("/product/admin/*");
+        filterRegistrationBean.addUrlPatterns("/order/admin/*");
         filterRegistrationBean.setName("adminFilterConf");
         return filterRegistrationBean;
     }

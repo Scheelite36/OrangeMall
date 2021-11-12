@@ -24,9 +24,9 @@ public class CartVO {
     // 是否选中
     public Integer selected;
     // 商品单价
-    public Double price;
+    public Integer price;
     // 商品总价
-    public Double totalPrice;
+    public Integer totalPrice;
     // 商品名称
     public String productName;
     // 商品图片

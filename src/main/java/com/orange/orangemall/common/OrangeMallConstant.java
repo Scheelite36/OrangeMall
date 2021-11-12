@@ -1,5 +1,6 @@
 package com.orange.orangemall.common;
 
+import io.swagger.models.auth.In;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +22,7 @@ import java.util.Set;
 public class OrangeMallConstant {
 
     /**
-     *
+     * session用户信息
      */
     public static final String MALL_USER = "orange_mall_user";
     /**
@@ -62,4 +63,20 @@ public class OrangeMallConstant {
      */
     public static final Integer SELECTED = 1;
     public static final Integer UNSELECTED = 0;
+
+    /**
+     * 订单是否包邮，邮费
+     */
+    public static final Integer ZERO_POSTAGE = 0;
+
+    /**
+     * 支付方式
+     */
+    public static final Integer ONLINE_PAY = 1;
+
+    /**
+     * 用户角色
+     */
+    public static final Integer ADMIN_ROLE = 2;
+    public static final Integer CUSTOM_ROLE =1;
 }

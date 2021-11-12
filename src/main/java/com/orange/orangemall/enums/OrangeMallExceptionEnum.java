@@ -21,6 +21,9 @@ public enum OrangeMallExceptionEnum {
     DELETE_FAIL(10012, "删除失败"),
     CREATE_FAIL(10013, "创建失败"),
     NOT_ENOUGH(10014,"库存不足"),
+    UNMATCHED_ORDER(10015,"订单与当前用户不匹配"),
+    NO_SUCH_ENUM(10016,"该枚举不存在"),
+    STATUS_ERROR(10017,"订单状态异常"),
     SYSTEM_ERROR(20001, "系统异常");
     /**
      * 异常码
