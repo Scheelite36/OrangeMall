@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -13,8 +14,7 @@ import javax.validation.constraints.Size;
  * @email jwei.gan@qq.com
  * @description
  **/
-@Getter
-@Setter
+@Data
 public class LoginParamReq {
 
     @NotNull(message = "用户名不能为空")

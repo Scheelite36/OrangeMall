@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.aspectj.bridge.IMessage;
@@ -14,8 +15,7 @@ import javax.validation.constraints.*;
  * @email jwei.gan@qq.com
  * @description 添加商品的请求类
  **/
-@Getter
-@Setter
+@Data
 public class AddProductReq {
 
     @NotNull(message = "商品名称不能为空")

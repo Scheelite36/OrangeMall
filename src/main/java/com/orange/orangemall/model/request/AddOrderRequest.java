@@ -1,6 +1,7 @@
 package com.orange.orangemall.model.request;
 
 import com.orange.orangemall.common.OrangeMallConstant;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,8 +14,7 @@ import javax.validation.constraints.Pattern;
  * @email jwei.gan@qq.com
  * @description 新增订单传入参数
  **/
-@Getter
-@Setter
+@Data
 public class AddOrderRequest {
 
     @NotNull(message = "收件人不为空")

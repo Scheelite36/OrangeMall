@@ -70,17 +70,4 @@ public class OrderController {
         orderService.finish(orderNo);
         return ApiRestResponse.success();
     }
-
-    @ApiOperation("订单发货")
-    @PostMapping("/admin/delivery")
-    public ApiRestResponse delivery(@RequestParam String orderNo){
-        orderService.delivery(orderNo);
-        return ApiRestResponse.success();
-    }
-
-    @ApiOperation("后台订单列表")
-    @GetMapping("/admin/list")
-    public ApiRestResponse listForAdmin(@RequestParam Integer pageNo, Integer pageSize){
-        return ApiRestResponse.success(orderService.listForAdmin(pageNo,pageSize));
-    }
 }

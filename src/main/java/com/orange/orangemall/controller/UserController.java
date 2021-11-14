@@ -69,17 +69,4 @@ public class UserController {
         session.removeAttribute(OrangeMallConstant.MALL_USER);
         return ApiRestResponse.success();
     }
-
-    @PostMapping("/admin/login")
-    @ResponseBody
-    @ApiOperation("管理员登陆")
-    public ApiRestResponse adminLogin(@Valid LoginParamReq loginParamReq, HttpSession session) throws OrangeMallException, NoSuchAlgorithmException {
-        User user = userService.login(loginParamReq.getUserName(), loginParamReq.getPassword());
-        if (!user.getRole().equals(2)) {
-            throw new OrangeMallException(OrangeMallExceptionEnum.ADMIN_VERIFY_FAIL);
-        }
-        user.setPassword(null);
-        session.setAttribute(OrangeMallConstant.MALL_USER, user);
-        return ApiRestResponse.success(user);
-    }
 }

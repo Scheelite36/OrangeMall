@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -13,8 +14,7 @@ import javax.validation.constraints.NotNull;
  * @email jwei.gan@qq.com
  * @description
  **/
-@Getter
-@Setter
+@Data
 public class CategoryReq {
     @NotNull(message = "商品分类名不能为空")
     @Length(message = "商品分类名需在{min}到{max}个字符之间",min = 2,max = 10)

@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -14,8 +15,7 @@ import javax.validation.constraints.Pattern;
  * @email jwei.gan@qq.com
  * @description
  **/
-@Getter
-@Setter
+@Data
 public class UpdateProductReq {
 
     @NotNull(message = "商品id不能为空")

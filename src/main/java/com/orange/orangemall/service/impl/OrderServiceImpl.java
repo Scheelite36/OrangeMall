@@ -21,6 +21,7 @@ import com.orange.orangemall.service.OrderService;
 import com.orange.orangemall.utils.OrderCodeFactory;
 import com.orange.orangemall.utils.QRCodeUtils;
 import com.orange.orangemall.utils.UserUtils;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -254,6 +255,8 @@ public class OrderServiceImpl implements OrderService {
             // 获取当前局域网ip
             // 存在隐患：当局域网络比较复杂（虚拟网卡、多网口同时使用等）会获取到错误地址
             String innerIp = InetAddress.getLocalHost().getHostAddress();
+        }catch (Exception e){
+            e.printStackTrace();
         }
         String payUrl = "http://" + serverIp + ":" + port + "/pay?orderNo=" + orderNo;
         String filePath = OrangeMallConstant.FILE_UPLOAD_DIR + orderNo + ".png";

@@ -22,11 +22,7 @@ public class AdminFilterConfig{
     public FilterRegistrationBean adminFilterConfig(){
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(adminFilter());
-//        filterRegistrationBean.addUrlPatterns("/user/admin/*");
-        filterRegistrationBean.addUrlPatterns("/category/admin/*");
-        filterRegistrationBean.addUrlPatterns("/cart/admin/*");
-        filterRegistrationBean.addUrlPatterns("/product/admin/*");
-        filterRegistrationBean.addUrlPatterns("/order/admin/*");
+        filterRegistrationBean.addUrlPatterns("/admin/*");
         filterRegistrationBean.setName("adminFilterConf");
         return filterRegistrationBean;
     }

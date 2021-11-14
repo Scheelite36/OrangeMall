@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,8 +13,7 @@ import javax.validation.constraints.Pattern;
  * @email jwei.gan@qq.com
  * @description 商品列表查询请求
  **/
-@Getter
-@Setter
+@Data
 public class ProductListReq {
 
     private Integer categoryId;

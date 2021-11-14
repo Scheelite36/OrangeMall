@@ -1,5 +1,6 @@
 package com.orange.orangemall.model.request;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -14,8 +15,7 @@ import javax.validation.constraints.NotNull;
  * @description 更新商品分类请求
  **/
 
-@Getter
-@Setter
+@Data
 public class UpdateCategoryReq {
 
     @NotNull(message = "商品分类id不能为空")
