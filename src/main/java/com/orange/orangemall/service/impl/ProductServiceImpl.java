@@ -153,6 +153,7 @@ public class ProductServiceImpl implements ProductService {
         //获取目录列表
         List<Integer> categoryIds = new ArrayList<>();
         if (productListReq.getCategoryId() != null) {
+            // 获取商品分类信息
             List<CategoryVO> categoryVOS = categoryService.categoryVOS(productListReq.getCategoryId());
             // 获取所有目录id（含子目录）
             categoryIds.add(productListReq.getCategoryId());

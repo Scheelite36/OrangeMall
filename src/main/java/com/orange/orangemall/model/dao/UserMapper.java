@@ -3,7 +3,7 @@ package com.orange.orangemall.model.dao;
 import com.orange.orangemall.model.pojo.User;
 import org.springframework.stereotype.Repository;
 
-@Repository
+//@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 

@@ -89,6 +89,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     private void recursivelyFindCategories(List<CategoryVO> categoryVOS, int parentId) {
+        // 获取子目录
         List<Category> categoryList = categoryMapper.findCategoriesByParentId(parentId);
         if (!CollectionUtils.isEmpty(categoryList)) {
             // 递归将子目录放入父目录中
@@ -97,6 +98,7 @@ public class CategoryServiceImpl implements CategoryService {
                         CategoryVO categoryVO = new CategoryVO();
                         BeanUtils.copyProperties(category,categoryVO);
                         categoryVOS.add(categoryVO);
+                        // 补充vo中的子目录列表
                         recursivelyFindCategories(categoryVO.getChildCategories(),categoryVO.getId());
                     }
             );
